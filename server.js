@@ -9,8 +9,7 @@ const FILE_PATH = path.join('/data', 'incoming-posts.log');
 app.use(express.json());
 
 app.post('/data', async (req, res) => {
-  const rb = await req.json()
-  const logEntry = `[${new Date().toISOString()}] ${JSON.stringify(rb)}\n`;
+  const logEntry = `[${new Date().toISOString()}] ${JSON.stringify(req.body)}\n`;
 
   try {
     console.log('POST /data:', logEntry);
