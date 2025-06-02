@@ -1,12 +1,13 @@
 {
   "name": "post-writer",
-  "version": "1.0.0",
-  "description": "Simple Express server that logs POSTs to a file and supports file retrieval",
+  "version": "1.1.0",
+  "description": "Express server that supports both JSON and NDJSON for logging",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "split2": "^4.1.0"
   }
 }
