@@ -12,8 +12,8 @@ app.post('/data', async (req, res) => {
   const logEntry = `[${new Date().toISOString()}] ${JSON.stringify(req.body)}\n`;
 
   try {
+    console.log('POST /data:', logEntry);
     await fs.appendFile(FILE_PATH, logEntry);
-    console.log('POST /data:', req.body);
     res.status(200).send('Data logged');
   } catch (err) {
     console.error('Failed to write to file:', err);
